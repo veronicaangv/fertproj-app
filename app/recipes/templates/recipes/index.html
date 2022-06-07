@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Recipe</th>
+                <th>Meal Type</th>
+                <th>Fertility Concern</th>
+                <th>Menstrual Phase</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for recipe in recipes %}
+                <tr>
+                    <td>
+                        <a href="{% url 'recipes:detail' recipe.id %}">{{ recipe.name }}</a>
+                    </td>
+                    <td>{{ recipe.meal }}</td>
+                    <td>{{ recipe.fert_concern }}</td>
+                    <td>{{ recipe.mense_phase }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}

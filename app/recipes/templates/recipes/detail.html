@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+    <dl>
+        <dt>
+            Recipe
+        </dt>
+        <dd>
+            {{ recipe.name }}
+        </dd>
+        <dt>
+            Meal Type
+        </dt>
+        <dd>
+            {{ recipe.meal }}
+        </dd>
+        <dt>
+            Fertility
+        </dt>
+        <dd>
+            {{ recipe.fert_concern }}
+        </dd>
+        <dt>
+            Ingredients
+        </dt>
+        <dd>
+            {{ recipe.ingredients }}
+        </dd>
+        <dt>
+            Instructions
+        </dt>
+        <dd>
+            {{ recipe.description }}
+        </dd>
+    </dl>
+{% endblock content %}
